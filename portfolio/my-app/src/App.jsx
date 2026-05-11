@@ -1085,6 +1085,8 @@ export default function Portfolio() {
               flexDirection: "column",
               gap: 24,
               animation: "fadeUp 0.7s ease both",
+              alignItems: "center",
+              textAlign: "center",
             }}
           >
             <div
@@ -1165,7 +1167,7 @@ export default function Portfolio() {
              I design and develop modern websites, create visual content through photo editing, and provide technical support for computer systems. I also build embedded system projects that combine hardware and software solutions.
             </p>
 
-            <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+            <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
               <button
                 onClick={() => scrollTo("projects")}
                 style={{
