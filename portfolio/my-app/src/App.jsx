@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from "react";
+import resumeFile from "./Resume/Resume.pdf";
 
 // ── DATA ─────────────────────────────────────────────────────────────────────
 
@@ -1203,7 +1204,7 @@ export default function Portfolio() {
               <button
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/src/Resume/Resume.pdf';
+                  link.href = resumeFile;
                   link.download = 'Mark_Berio_Resume.pdf';
                   document.body.appendChild(link);
                   link.click();
