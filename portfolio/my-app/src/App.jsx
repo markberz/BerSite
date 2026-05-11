@@ -1205,7 +1205,7 @@ export default function Portfolio() {
                   cursor: "none",
                 }}
               >
-                Download Resume
+                Resume
               </button>
               <button
                 onClick={() => scrollTo("contact")}
