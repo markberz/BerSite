@@ -1203,7 +1203,7 @@ export default function Portfolio() {
               <button
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/Mark_Berio_Resume.pdf';
+                  link.href = '/src/Resume/Resume.pdf';
                   link.download = 'Mark_Berio_Resume.pdf';
                   document.body.appendChild(link);
                   link.click();
