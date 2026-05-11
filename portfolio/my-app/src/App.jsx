@@ -1187,7 +1187,7 @@ export default function Portfolio() {
               <button
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/Resume.pdf'; // Ensure this path points to your actual resume file
+                  link.href = '/Resume/Resume.pdf'; // Ensure this path points to your actual resume file
                   link.download = 'Mark_Berio_Resume.pdf';
                   document.body.appendChild(link);
                   link.click();
