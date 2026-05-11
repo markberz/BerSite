@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://markberz.github.io/Marksite",
+  "homepage": "https://markberz.github.io/BerSite/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
