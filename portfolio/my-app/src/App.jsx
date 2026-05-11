@@ -1185,9 +1185,25 @@ export default function Portfolio() {
                 View Projects
               </button>
               <button
+                onClick={() => scrollTo("contact")}
+                style={{
+                  background: "transparent",
+                  color: c.text,
+                  border: `1px solid ${c.borderMid}`,
+                  borderRadius: 10,
+                  padding: "14px 28px",
+                  fontSize: 15,
+                  fontWeight: 500,
+                  fontFamily: "'Space Grotesk',sans-serif",
+                  cursor: "none",
+                }}
+              >
+                Contact Me
+              </button>
+              <button
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/Resume/Resume.pdf'; // Ensure this path points to your actual resume file
+                  link.href = '/Mark_Berio_Resume.pdf';
                   link.download = 'Mark_Berio_Resume.pdf';
                   document.body.appendChild(link);
                   link.click();
@@ -1206,22 +1222,6 @@ export default function Portfolio() {
                 }}
               >
                 Resume
-              </button>
-              <button
-                onClick={() => scrollTo("contact")}
-                style={{
-                  background: "transparent",
-                  color: c.text,
-                  border: `1px solid ${c.borderMid}`,
-                  borderRadius: 10,
-                  padding: "14px 28px",
-                  fontSize: 15,
-                  fontWeight: 500,
-                  fontFamily: "'Space Grotesk',sans-serif",
-                  cursor: "none",
-                }}
-              >
-                Contact Me
               </button>
             </div>
           </div>
