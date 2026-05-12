@@ -163,6 +163,14 @@ const ALL_PROJECTS = [
 const CERTIFICATES = [
   {
     id: 1,
+    title: "Python Essentials",
+    issuer: "Cisco",
+    year: "2026",
+    img: new URL("./Pictures/certificates/PythonEssential.png", import.meta.url).href,
+  },
+
+  {
+    id: 1,
     title: "Data Analytics Essentials",
     issuer: "Cisco",
     year: "2025",
