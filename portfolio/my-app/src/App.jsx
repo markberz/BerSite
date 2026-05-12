@@ -166,7 +166,7 @@ const CERTIFICATES = [
     title: "Python Essentials",
     issuer: "Cisco",
     year: "2026",
-    img: new URL("./Pictures/certificates/PythonEssential.png", import.meta.url).href,
+    img: new URL("./Pictures/certificates/PythonEssential.jpg", import.meta.url).href,
   },
 
   {
