@@ -39,9 +39,9 @@ const ALL_PROJECTS = [
     cat: "Photo Editing",
     title: "ID & Outfit Retouching",
     desc: "ID editing and outfit change services to make your photos look perfect and customized.",
-    img: new URL("./Pictures/photo/portrait.png", import.meta.url).href,
-    tags: ["Photoshop", "Retouching"],
-    link: "https://example.com/portrait",
+    img: new URL("./Pictures/editing/ID.png", import.meta.url).href,
+    tags: ["Canva", "Remini"],
+    link: "https://canva.link/kz1i6b7zjdwjvdu",
     year: "2026",
   },
   {
