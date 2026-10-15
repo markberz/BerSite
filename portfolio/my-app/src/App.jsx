@@ -508,6 +508,26 @@ export default function Portfolio() {
           *{box-sizing:border-box;margin:0;padding:0;}
           *{cursor:auto!important;}
           button,a,[role="button"]{cursor:pointer!important;}
+          .hero-outline-button{transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease;cursor:pointer!important;}
+          .hero-outline-button:hover{background:#1E3A8A!important;color:#fff!important;border-color:#1E3A8A!important;transform:translateY(-2px);box-shadow:0 8px 20px rgba(30,58,138,.22);}
+          .hero-outline-button:focus-visible{outline:2px solid #1E3A8A;outline-offset:3px;}
+                  .mobile-menu-link{transition:background .2s ease,color .2s ease,border-color .2s ease,padding .2s ease;cursor:pointer!important;}
+                  .mobile-menu-link:hover,.mobile-menu-link:focus-visible,.mobile-menu-link:active{background:rgba(30,58,138,.22)!important;color:#fff!important;border-bottom-color:#1E3A8A!important;padding-left:16px!important;}
+                  .mobile-menu-link:focus-visible{outline:2px solid #1E3A8A;outline-offset:2px;}
+                @media (max-width: 768px) {
+                  #about .about-heading { margin-bottom: 32px !important; }
+                  #about .about-layout { grid-template-columns: minmax(0, 1fr) !important; gap: 32px !important; }
+                  #about .about-copy { font-size: 15px !important; line-height: 1.7 !important; }
+                  #about .about-skills { gap: 7px !important; margin-top: 4px !important; }
+                  #about .about-skill { max-width: 100%; padding: 6px 10px !important; font-size: 11px !important; overflow-wrap: anywhere; }
+                  #about .about-specialties { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px !important; }
+                  #about .about-specialty { min-width: 0; padding: 14px !important; gap: 8px !important; align-items: flex-start !important; }
+                  #about .about-specialty > span { font-size: 22px !important; }
+                  #about .about-specialty > div p:last-child { font-size: 13px !important; line-height: 1.4 !important; overflow-wrap: anywhere; }
+                }
+                @media (max-width: 360px) {
+                  #about .about-specialties { grid-template-columns: 1fr !important; }
+                }
         html, body, #root {background: var(--page-bg, #f4f4ef); min-height: 100%; width: 100%;}
         html{scroll-behavior:smooth;}
         body{margin:0;}
@@ -975,6 +995,7 @@ export default function Portfolio() {
           }}
         >
           <div
+            className="about-heading"
             style={{
               position: "absolute",
               top: 4,
@@ -1029,6 +1050,7 @@ export default function Portfolio() {
                 scrollTo(link.toLowerCase());
                 setMenuOpen(false);
               }}
+              className="mobile-menu-link"
               style={{
                 background: "transparent",
                 border: "none",
@@ -1195,6 +1217,7 @@ export default function Portfolio() {
                 View Projects
               </button>
               <button
+                className="hero-outline-button"
                 onClick={() => scrollTo("contact")}
                 style={{
                   background: "transparent",
@@ -1211,6 +1234,7 @@ export default function Portfolio() {
                 Contact Me
               </button>
               <button
+                className="hero-outline-button"
                 onClick={() => {
                   const link = document.createElement('a');
                   link.href = resumeFile;
@@ -1313,21 +1337,23 @@ export default function Portfolio() {
            <h2 style={{ ...sTitle, textAlign: "center" }}>About Me</h2>
           </div>
           <div
+            className="about-layout"
             style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60 }}
           >
             <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-              <p style={{ color: c.textMuted, fontSize: 16, lineHeight: 1.8 }}>
+              <p className="about-copy" style={{ color: c.textMuted, fontSize: 16, lineHeight: 1.8 }}>
                 I'm {" "}
                 <span style={{ color: c.accent, fontWeight: 600 }}>
                   Mark D. Berio
                 </span>{" "}
                   a web designer and developer who creates websites, produces visual content through photo editing, and provides technical support for computer systems. I also develop embedded system projects that integrate both hardware and software solutions. I am passionate about working at the intersection of creativity and technology, transforming ideas into practical digital experiences.              </p>
-              <p style={{ color: c.textMuted, fontSize: 16, lineHeight: 1.8 }}>
+              <p className="about-copy" style={{ color: c.textMuted, fontSize: 16, lineHeight: 1.8 }}>
                 Every project is an opportunity to push creative boundaries and
                 deliver work that not only looks stunning but achieves real
                 results.
               </p>
               <div
+                className="about-skills"
                 style={{
                   display: "flex",
                   flexWrap: "wrap",
@@ -1338,6 +1364,7 @@ export default function Portfolio() {
                 {SKILLS.map((sk) => (
                   <span
                     key={sk}
+                    className="about-skill"
                     style={{
                       background: c.skillBg,
                       border: `1px solid ${c.border}`,
@@ -1355,6 +1382,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div
+              className="about-specialties"
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
@@ -1371,6 +1399,7 @@ export default function Portfolio() {
               ].map(([icon, label, val]) => (
                 <div
                   key={label}
+                  className="about-specialty"
                   style={{
                     background: c.bgCard,
                     border: `1px solid ${c.border}`,
